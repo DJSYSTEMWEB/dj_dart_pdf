@@ -2,13 +2,14 @@ group "net.nfet.flutter.printing"
 version "1.0"
 
 buildscript {
+	ext.kotlin_version = '2.2.0'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:7.3.0"
+        classpath "com.android.tools.build:gradle:8.13.1"
     }
 }
 
@@ -26,12 +27,16 @@ android {
         namespace = "net.nfet.flutter.printing"
     }
 
-    compileSdk = 34
+    compileSdk = flutter.compileSdk
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
+
+	kotlinOption {
+		jvmTarget = 17
+	}
 
     defaultConfig {
         minSdk = 21
