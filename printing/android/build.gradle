@@ -27,7 +27,7 @@ android {
         namespace = "net.nfet.flutter.printing"
     }
 
-    compileSdk = flutter.compileSdk
+    compileSdk = flutter.compileSdkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
