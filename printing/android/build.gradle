@@ -9,7 +9,8 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:8.13.1"
+        classpath "com.android.tools.build:gradle:8.13.0"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -21,6 +22,7 @@ rootProject.allprojects {
 }
 
 apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
 
 android {
     if (project.android.hasProperty("namespace")) {
@@ -30,8 +32,8 @@ android {
     compileSdk = flutter.compileSdkVersion
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
 	kotlinOptions {
@@ -39,7 +41,7 @@ android {
 	}
 
     defaultConfig {
-        minSdkVersion = 21
+        minSdkVersion 21
     }
 
     lintOptions {
