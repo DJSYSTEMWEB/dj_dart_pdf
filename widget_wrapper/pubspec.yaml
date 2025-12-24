@@ -5,6 +5,7 @@ homepage: https://github.com/DavBfr/dart_pdf/tree/master/widget_wrapper
 repository: https://github.com/DavBfr/dart_pdf
 issue_tracker: https://github.com/DavBfr/dart_pdf/issues
 version: 1.0.4
+publish_to: none
 
 environment:
   sdk: ">=2.18.0 <4.0.0"
@@ -21,11 +22,12 @@ dependencies:
 
 dependency_overrides:
   pdf:
-    path: ../pdf
+    git:
+      url: https://github.com/DJSYSTEMWEB/dj_dart_pdf.git
+      ref: develop
+      path: pdf
 
 dev_dependencies:
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-
-flutter:
